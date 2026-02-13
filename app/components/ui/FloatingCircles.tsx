@@ -4,9 +4,9 @@ const circles = [
   {
     size: 32,
     top: '743px',
-    left: '103px',
+    left: '143px',
     innerSize: 10.29,
-    innerLeft: '113.86px',
+    innerLeft: '133.86px',
     innerTop: '753.86px',
   },
   // Left middle - 56px
@@ -21,19 +21,19 @@ const circles = [
   // Center - 32px
   {
     size: 32,
-    top: '777px',
-    left: '800px',
+    top: '787px',
+    left: '820px',
     innerSize: 10.29,
-    innerLeft: '810.86px',
-    innerTop: '787.86px',
+    innerLeft: '830.86px',
+    innerTop: '797.86px',
   },
   // Bottom right - 37px
   {
     size: 37,
     top: '809px',
-    left: '1369px',
+    left: '1379px',
     innerSize: 11.89,
-    innerLeft: '1381.55px',
+    innerLeft: '1391.55px',
     innerTop: '821.55px',
   },
 ];

@@ -6,7 +6,7 @@ import SearchBar from "../ui/SearchBar";
 export default function Hero() {
   return (
     <section className="relative w-full overflow-hidden bg-dark">
-      <div className="relative w-full aspect-[1440/1084] max-w-[1440px] mx-auto">
+      <div className="relative w-full aspect-[1440/1084]">
         <Image
           src="/images/landingImage.jpg"
           alt="Modern interior with orange sofa"

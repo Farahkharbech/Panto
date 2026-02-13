@@ -3,38 +3,38 @@ const circles = [
   // Top left - 32px
   {
     size: 32,
-    top: '743px',
-    left: '103px',
+    top: '763px',
+    left: '123px',
     innerSize: 10.29,
-    innerLeft: '113.86px',
+    innerLeft: '133.86px',
     innerTop: '753.86px',
   },
   // Left middle - 56px
   {
     size: 56,
     top: '666.6px',
-    left: '277px',
+    left: '297px',
     innerSize: 18,
-    innerLeft: '296px',
+    innerLeft: '316px',
     innerTop: '685.6px',
   },
   // Center - 32px
   {
     size: 32,
-    top: '777px',
-    left: '800px',
+    top: '757px',
+    left: '820px',
     innerSize: 10.29,
-    innerLeft: '810.86px',
-    innerTop: '787.86px',
+    innerLeft: '830.86px',
+    innerTop: '767.86px',
   },
   // Bottom right - 37px
   {
     size: 37,
-    top: '809px',
-    left: '1369px',
+    top: '829px',
+    left: '1389px',
     innerSize: 11.89,
-    innerLeft: '1381.55px',
-    innerTop: '821.55px',
+    innerLeft: '1401.55px',
+    innerTop: '841.55px',
   },
 ];
 

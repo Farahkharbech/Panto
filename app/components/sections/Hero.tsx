@@ -49,7 +49,7 @@ export default function Hero() {
           className="absolute hidden lg:block"
           style={{
             top: '585px',
-            left: '249px',
+            left: '269px',
           }}
         >
           <ColorSelector />

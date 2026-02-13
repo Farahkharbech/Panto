@@ -79,13 +79,14 @@ export default function BestSellingProducts() {
               className="relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="relative bg-[#FAFAFA] h-60 flex items-center justify-center">
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  width={218}
-                  height={256}
-                  className="object-contain"
-                />
+                <div className="relative w-[218px] h-[256px]">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
                 <div 
                   className="absolute bottom-8 w-[150px] h-[72px] bg-black/10 blur-xl rounded-full"
                 />

@@ -1,14 +1,14 @@
 export default function FloatingCircles() {
 const circles = [
   // Top left - 32px
-  {
-    size: 32,
-    top: '743px',
-    left: '143px',
-    innerSize: 10.29,
-    innerLeft: '133.86px',
-    innerTop: '753.86px',
-  },
+ {
+  size: 32,
+  top: '743px',
+  left: '123px',
+  innerSize: 10.29,
+  innerLeft: '133.86px',
+  innerTop: '753.86px',
+},
   // Left middle - 56px
   {
     size: 56,
@@ -20,22 +20,22 @@ const circles = [
   },
   // Center - 32px
   {
-    size: 32,
-    top: '787px',
-    left: '820px',
-    innerSize: 10.29,
-    innerLeft: '830.86px',
-    innerTop: '797.86px',
-  },
+  size: 32,
+  top: '797px',
+  left: '830px',
+  innerSize: 10.29,
+  innerLeft: '840.86px',
+  innerTop: '807.86px',
+},
   // Bottom right - 37px
-  {
-    size: 37,
-    top: '809px',
-    left: '1379px',
-    innerSize: 11.89,
-    innerLeft: '1391.55px',
-    innerTop: '821.55px',
-  },
+{
+  size: 37,
+  top: '819px',
+  left: '1389px',
+  innerSize: 11.89,
+  innerLeft: '1401.55px',
+  innerTop: '831.55px',
+},
 ];
   return (
     <>

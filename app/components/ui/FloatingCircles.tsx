@@ -22,19 +22,19 @@ const circles = [
   {
   size: 32,
   top: '797px',
-  left: '830px',
+  left: '840px',
   innerSize: 10.29,
-  innerLeft: '840.86px',
+  innerLeft: '850.86px',
   innerTop: '807.86px',
 },
   // Bottom right - 37px
 {
   size: 37,
-  top: '819px',
-  left: '1389px',
+  top: '829px',
+  left: '1399px',
   innerSize: 11.89,
-  innerLeft: '1401.55px',
-  innerTop: '831.55px',
+  innerLeft: '1411.55px',
+  innerTop: '841.55px',
 },
 ];
   return (

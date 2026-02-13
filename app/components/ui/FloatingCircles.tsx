@@ -31,9 +31,9 @@ const circles = [
 {
   size: 37,
   top: '829px',
-  left: '1409px',
+  left: '1419px',
   innerSize: 11.89,
-  innerLeft: '1421.55px',
+  innerLeft: '1431.55px',
   innerTop: '841.55px',
 },
 ];

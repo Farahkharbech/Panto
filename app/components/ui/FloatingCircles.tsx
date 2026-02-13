@@ -10,14 +10,14 @@ const circles = [
   innerTop: '753.86px',
 },
   // Left middle - 56px
-  {
-    size: 56,
-    top: '666.6px',
-    left: '277px',
-    innerSize: 18,
-    innerLeft: '296px',
-    innerTop: '685.6px',
-  },
+ {
+  size: 56,
+  top: '666.6px',
+  left: '287px',
+  innerSize: 18,
+  innerLeft: '306px',
+  innerTop: '685.6px',
+},
   // Center - 32px
   {
   size: 32,

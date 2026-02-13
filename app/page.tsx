@@ -5,6 +5,7 @@ import SellingProduct from './components/sections/SellingProducts'
 import Experience from './components/sections/Experience'
 import MaterialsSection from './components/sections/Materials'
 import Testimonial from './components/sections/Testimonial'
+import WhyChoosingUs from './components/sections/WhyChoosingUs'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <WhyChoosingUs/>
        <SellingProduct/>
         <Experience/>
         <MaterialsSection/>

@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { Star, Plus } from 'lucide-react'
+import { Star, Plus, ArrowRight } from 'lucide-react'
 
 export default function BestSellingProducts() {
   const [activeCategory, setActiveCategory] = useState('Chair')
@@ -45,59 +45,26 @@ export default function BestSellingProducts() {
   ]
 
   return (
-    <section 
-      className="relative w-full bg-[#F7F7F7] py-12 mb-24"
-      style={{
-        minHeight: '906px',
-      }}
-    >
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-20">
+    <section className="relative w-full bg-[#F7F7F7] py-16 lg:py-20">
+      <div className="max-w-7xl mx-auto px-6 lg:px-20">
         
-        {/* Section Title */}
-        <h2 
-          className="font-display text-[#1E1E1E] text-center mb-8"
-          style={{
-            fontSize: '42px',
-            lineHeight: '49px',
-          }}
-        >
+        <h2 className="font-bold text-[#1E1E1E] text-4xl lg:text-[42px] leading-tight text-center mb-8">
           Best Selling Product
         </h2>
 
-        {/* Category Filter */}
         <div className="flex justify-center mb-12">
-          <div 
-            className="flex gap-1.5 p-1.5 bg-[#EEEEEE] rounded-[44px]"
-            style={{
-              width: '348px',
-              height: '57px',
-            }}
-          >
+          <div className="flex gap-1.5 p-1.5 bg-[#EEEEEE] rounded-full">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`flex items-center justify-center px-4 rounded-[32px] transition-all duration-200 ${
+                className={`px-6 py-2.5 rounded-full transition-all duration-200 text-lg ${
                   activeCategory === category 
-                    ? 'bg-white' 
+                    ? 'bg-white font-medium' 
                     : 'bg-transparent hover:bg-white/50'
                 }`}
-                style={{
-                  width: '84px',
-                  height: '45px',
-                }}
               >
-                <span 
-                  className={`${
-                    activeCategory === category ? 'font-sans' : 'font-sans'
-                  } text-[#1E1E1E]`}
-                  style={{
-                    fontSize: '18px',
-                    lineHeight: '185%',
-                    opacity: 0.8,
-                    fontWeight: activeCategory === category ? 500 : 400,
-                  }}
-                >
+                <span className="text-[#1E1E1E] opacity-80">
                   {category}
                 </span>
               </button>
@@ -105,127 +72,60 @@ export default function BestSellingProducts() {
           </div>
         </div>
 
-        {/* Product Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12">
           {products.map((product) => (
             <div 
               key={product.id}
-              className="relative bg-white rounded-[20px] overflow-hidden"
-              style={{
-                height: '450px',
-              }}
+              className="relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
             >
-              {/* Product Image Background */}
-              <div 
-                className="relative bg-[#FAFAFA] flex items-center justify-center"
-                style={{
-                  height: '239.15px',
-                }}
-              >
+              <div className="relative bg-[#FAFAFA] h-60 flex items-center justify-center">
                 <Image
                   src={product.image}
                   alt={product.name}
                   width={218}
                   height={256}
-                  className="object-cover"
+                  className="object-contain"
                 />
-                {/* Shadow under product */}
                 <div 
-                  className="absolute bottom-8"
-                  style={{
-                    width: '150px',
-                    height: '72px',
-                    background: 'rgba(0, 0, 0, 0.09)',
-                    filter: 'blur(12px)',
-                    borderRadius: '50%',
-                  }}
+                  className="absolute bottom-8 w-[150px] h-[72px] bg-black/10 blur-xl rounded-full"
                 />
               </div>
 
-              {/* Product Info */}
               <div className="p-6">
-                {/* Category */}
-                <p 
-                  className="text-[#8D8D8D] mb-2"
-                  style={{
-                    fontFamily: 'Inter',
-                    fontSize: '16.76px',
-                    lineHeight: '20px',
-                  }}
-                >
+                <p className="text-[#8D8D8D] text-base mb-2">
                   {product.category}
                 </p>
 
-                {/* Product Name */}
-                <h3 
-                  className="text-[#091B3C] mb-4"
-                  style={{
-                    fontFamily: 'Inter',
-                    fontSize: '21.33px',
-                    lineHeight: '26px',
-                    fontWeight: 600,
-                    textTransform: 'capitalize',
-                  }}
-                >
+                <h3 className="text-[#091B3C] text-xl font-semibold capitalize mb-4">
                   {product.name}
                 </h3>
 
-                {/* Rating Stars */}
                 <div className="flex gap-1 mb-4">
                   {[...Array(product.rating)].map((_, i) => (
                     <Star 
                       key={i}
-                      className="text-[#FFB461]"
+                      className="w-[18px] h-[18px] text-[#FFB461]"
                       fill="#FFB461"
-                      style={{
-                        width: '18.28px',
-                        height: '18.28px',
-                      }}
                     />
                   ))}
                 </div>
 
-                {/* Price and Add Button */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-baseline gap-1">
-                    <span 
-                      className="text-[#091B3C]"
-                      style={{
-                        fontFamily: 'Inter',
-                        fontSize: '15.23px',
-                        lineHeight: '18px',
-                        fontWeight: 600,
-                      }}
-                    >
+                    <span className="text-[#091B3C] text-sm font-semibold">
                       $
                     </span>
-                    <span 
-                      className="text-[#091B3C]"
-                      style={{
-                        fontFamily: 'Inter',
-                        fontSize: '21.33px',
-                        lineHeight: '26px',
-                        fontWeight: 600,
-                      }}
-                    >
+                    <span className="text-[#091B3C] text-xl font-semibold">
                       {product.price}
                     </span>
                   </div>
 
-                  {/* Add to Cart Button */}
                   <button 
-                    className="flex items-center justify-center bg-[#091B3C] rounded-full hover:opacity-90 transition-opacity"
-                    style={{
-                      width: '48.74px',
-                      height: '48.74px',
-                    }}
+                    className="flex items-center justify-center w-12 h-12 bg-[#091B3C] rounded-full hover:opacity-90 transition-opacity"
+                    aria-label="Add to cart"
                   >
                     <Plus 
-                      className="text-white"
-                      style={{
-                        width: '24.37px',
-                        height: '24.37px',
-                      }}
+                      className="w-6 h-6 text-white"
                       strokeWidth={2}
                     />
                   </button>
@@ -233,6 +133,16 @@ export default function BestSellingProducts() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="flex justify-center">
+          <button className="flex items-center gap-3 text-[#F57E00] font-medium text-lg hover:gap-4 transition-all duration-300 group">
+            <span>View All</span>
+            <ArrowRight 
+              className="w-6 h-6 group-hover:translate-x-1 transition-transform"
+              strokeWidth={1.5}
+            />
+          </button>
         </div>
       </div>
     </section>

@@ -2,23 +2,23 @@ import React from "react";
 
 export default function MaterialsSection() {
   return (
-    <section className="relative w-full flex flex-col lg:flex-row items-center gap-12 px-6 lg:px-20 h-screen">
-      {/* Left Content */}
-      <div className="flex flex-col justify-center lg:w-1/2 gap-6 pl-4 lg:pl-0 h-full">
-        <span className="text-[#F47E00] font-[Gilroy-SemiBold] text-[18px] leading-[21px] tracking-widest uppercase">
+    <section className="relative w-full flex flex-col lg:flex-row items-center px-6 lg:px-20 py-20 bg-white overflow-hidden">
+      {/* Left Content - Half width */}
+      <div className="flex flex-col justify-center lg:w-1/2 max-w-[500px] gap-6 z-10">
+        <span className="text-[#F47E00] font-semibold text-sm tracking-[0.2em] uppercase">
           Materials
         </span>
-
-        <h2 className="text-[#1E1E1E] font-[Gilroy-Bold] text-[42px] leading-[49px] capitalize">
+        
+        <h2 className="text-[#1E1E1E] font-bold text-[38px] lg:text-[42px] leading-tight">
           Very Serious Materials For Making Furniture
         </h2>
-
-        <p className="text-[#1E1E1E] font-[Gilroy-Regular] text-[18px] leading-[185%] opacity-80">
-          Because Panto was very serious about designing furniture for our environment,
+        
+        <p className="text-[#1E1E1E] text-base lg:text-[17px] leading-relaxed opacity-70">
+          Because panto was very serious about designing furniture for our environment, 
           using a very expensive and famous capital but at a relatively low price.
         </p>
-
-        <div className="flex items-center gap-2 mt-2 text-[#F57E00] font-[Gilroy-Medium] text-[14px]">
+        
+        <button className="flex items-center gap-2 text-[#F47E00] font-medium text-sm hover:gap-3 transition-all duration-300">
           <span>More Info</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -34,50 +34,53 @@ export default function MaterialsSection() {
               d="M9 5l7 7-7 7"
             />
           </svg>
-        </div>
+        </button>
       </div>
 
-      {/* Right Section - two columns */}
-      <div className="relative lg:w-1/2 flex justify-end h-full gap-6">
-        {/* Left column: vertical images */}
-        <div className="flex flex-col lg:w-[223px] gap-6 z-20">
-          <div
-            className="w-[223px] h-[229px] rounded-[14px] bg-cover bg-left transform scale-x-[-1] rotate-180"
-            style={{ backgroundImage: "url('/images/material1.jpg')" }}
-          />
-          <div
-            className="w-[223px] h-[338px] rounded-[14px] bg-cover bg-left"
-            style={{ backgroundImage: "url('/images/material2.jpg')" }}
-          />
+      {/* Right Section - Image Gallery - Half width, overflows to the right */}
+      <div className="relative lg:w-1/2 flex items-center gap-6 min-h-[600px] lg:pl-12">
+        {/* Left Column - Two smaller images stacked vertically */}
+        <div className="flex flex-col gap-6 z-20">
+          {/* Top small image */}
+          <div 
+            className="w-[223px] h-[229px] rounded-2xl overflow-hidden shadow-lg"
+          >
+            <img 
+              src="/images/material1.jpg" 
+              alt="Modern furniture chair"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          
+          {/* Bottom small image */}
+          <div 
+            className="w-[223px] h-[338px] rounded-2xl overflow-hidden shadow-lg"
+          >
+            <img 
+              src="/images/material2.jpg" 
+              alt="Green wall with pink couch"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
 
-        {/* Right column: main cut image */}
-        <div className="relative lg:w-[629px] lg:h-[445px] -mr-10 flex-shrink-0 z-20">
-          {/* Optional background rectangle behind main image */}
-          <div className="absolute w-[555px] h-[423px] top-[22px] left-[35px] bg-[#F7F7F7] rounded-[20px]" />
-
-          {/* Main cut image */}
-          <div
-            className="absolute w-[629px] h-[445px] top-0 right-0 rounded-[20px] bg-cover bg-left transform scale-x-[-1]"
-            style={{ backgroundImage: "url('/images/material3.jpg')" }}
-          />
+        {/* Right Column - Large main image (cut off on right side) */}
+        <div className="relative">
+          {/* Background rectangle for depth */}
+          <div className="absolute w-[555px] h-[423px] top-[22px] left-[35px] bg-[#F7F7F7] rounded-[20px] z-0" />
+          
+          {/* Main large image - positioned to overflow right, flipped horizontally */}
+          <div 
+            className="relative w-[629px] h-[445px] rounded-[20px] overflow-hidden shadow-2xl z-10"
+            style={{ transform: 'scaleX(-1)' }}
+          >
+            <img 
+              src="/images/material3.jpg" 
+              alt="Dining room with orange chairs"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
-
-        {/* Blur behind vertical images */}
-        <div
-          className="absolute w-[177px] h-[183px] top-[10%] rounded-[29px] bg-cover bg-center opacity-50 blur-[25px] transform scale-x-[-1]"
-          style={{ backgroundImage: "url('/images/material1-blur.jpg')" }}
-        />
-        <div
-          className="absolute w-[177px] h-[301px] top-[40%] rounded-[29px] bg-cover bg-center opacity-50 blur-[25px] transform scale-x-[-1]"
-          style={{ backgroundImage: "url('/images/material2-blur.jpg')" }}
-        />
-
-        {/* Blur behind main cut image */}
-        <div
-          className="absolute w-[555px] h-[423px] top-[22px] left-[35px] rounded-[49px] bg-cover opacity-50 backdrop-blur-[50px] transform scale-x-[-1] z-10"
-          style={{ backgroundImage: "url('/images/material3-bg.jpg')" }}
-        />
       </div>
     </section>
   );

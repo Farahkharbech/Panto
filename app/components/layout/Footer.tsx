@@ -2,181 +2,81 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer 
-      className="relative w-full bg-[#F7F7F7]"
-      style={{
-        height: '462px',
-      }}
-    >
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-20 relative h-full">
+    <footer className="relative w-full bg-[#F7F7F7] py-24">
+      <div className="max-w-7xl mx-auto px-6 lg:px-20">
         
-        {/* Main Content Grid - Top 118px from top */}
-        <div 
-          className="absolute flex justify-between gap-12"
-          style={{
-            width: '1064px',
-            left: '188px',
-            top: '118px',
-          }}
-        >
-          {/* Logo & About - 20.66% width */}
-          <div className="flex flex-col gap-6" style={{ width: '21.66%' }}>
+        <div className="flex flex-col lg:flex-row justify-between gap-12 mb-20">
+          <div className="flex flex-col gap-6 lg:w-1/4">
             <h1 
-              className="font-display text-[#1E1E1E]"
-              style={{
-                fontSize: '28px',
-                lineHeight: '33px',
-                letterSpacing: '0.01em',
-                textTransform: 'capitalize',
-              }}
+              className="font-display text-[#1E1E1E] text-3xl leading-tight tracking-tight capitalize"
             >
               Panto
             </h1>
-            <p 
-              className="font-sans w-72 text-[#1E1E1E]"
-              style={{
-                fontSize: '15px',
-                lineHeight: '160%',
-                opacity: 0.8,
-              }}
-            >
+            <p className="font-sans text-[#1E1E1E] text-[15px] leading-relaxed opacity-80">
               The advantage of hiring a workspace with us is that gives you comfortable service and all-around facilities.
             </p>
           </div>
 
-          {/* Services - 9.23% width */}
-          <div className="flex flex-col gap-4" style={{ width: '9.23%' }}>
-            <h2 
-              className="text-[#FF911D]"
-              style={{
-                fontFamily: 'DM Sans',
-                fontSize: '16px',
-                lineHeight: '22px',
-                letterSpacing: '-0.3px',
-                fontWeight: 500,
-              }}
-            >
+          <div className="flex flex-col gap-4">
+            <h2 className="text-[#FF911D] font-medium text-base tracking-tight">
               Services
             </h2>
             <nav className="flex flex-col gap-4">
               <a 
                 href="#" 
-                className="font-sans text-[#1E1E1E] hover:opacity-100 transition-opacity"
-                style={{
-                  fontSize: '15px',
-                  lineHeight: '160%',
-                  opacity: 0.8,
-                  fontWeight: 500,
-                }}
+                className="font-sans text-[#1E1E1E] text-[15px] leading-relaxed opacity-80 hover:opacity-100 transition-opacity font-medium"
               >
                 Email Marketing
               </a>
               <a 
                 href="#" 
-                className="font-sans text-[#1E1E1E] hover:opacity-100 transition-opacity"
-                style={{
-                  fontSize: '15px',
-                  lineHeight: '160%',
-                  opacity: 0.8,
-                  fontWeight: 500,
-                }}
+                className="font-sans text-[#1E1E1E] text-[15px] leading-relaxed opacity-80 hover:opacity-100 transition-opacity font-medium"
               >
                 Campaigns
               </a>
               <a 
                 href="#" 
-                className="font-sans text-[#1E1E1E] hover:opacity-100 transition-opacity"
-                style={{
-                  fontSize: '15px',
-                  lineHeight: '160%',
-                  opacity: 0.8,
-                  fontWeight: 500,
-                }}
+                className="font-sans text-[#1E1E1E] text-[15px] leading-relaxed opacity-80 hover:opacity-100 transition-opacity font-medium"
               >
                 Branding
               </a>
             </nav>
           </div>
 
-          {/* Furniture - 9.24% width */}
-          <div className="flex flex-col gap-4" style={{ width: '9.24%' }}>
-            <h2 
-              className="text-[#FF911D]"
-              style={{
-                fontFamily: 'DM Sans',
-                fontSize: '17px',
-                lineHeight: '22px',
-                letterSpacing: '-0.231818px',
-                fontWeight: 500,
-              }}
-            >
+          <div className="flex flex-col gap-4">
+            <h2 className="text-[#FF911D] font-medium text-base tracking-tight">
               Furniture
             </h2>
             <nav className="flex flex-col gap-4">
               <a 
                 href="#" 
-                className="font-sans text-[#1E1E1E] hover:opacity-100 transition-opacity"
-                style={{
-                  fontSize: '15px',
-                  lineHeight: '160%',
-                  opacity: 0.8,
-                  fontWeight: 500,
-                }}
+                className="font-sans text-[#1E1E1E] text-[15px] leading-relaxed opacity-80 hover:opacity-100 transition-opacity font-medium"
               >
                 Beds
               </a>
               <a 
                 href="#" 
-                className="font-sans text-[#1E1E1E] hover:opacity-100 transition-opacity"
-                style={{
-                  fontSize: '15px',
-                  lineHeight: '160%',
-                  opacity: 0.8,
-                  fontWeight: 500,
-                }}
+                className="font-sans text-[#1E1E1E] text-[15px] leading-relaxed opacity-80 hover:opacity-100 transition-opacity font-medium"
               >
                 Chair
               </a>
               <a 
                 href="#" 
-                className="font-sans text-[#1E1E1E] hover:opacity-100 transition-opacity"
-                style={{
-                  fontSize: '15px',
-                  lineHeight: '160%',
-                  opacity: 0.8,
-                  fontWeight: 500,
-                }}
+                className="font-sans text-[#1E1E1E] text-[15px] leading-relaxed opacity-80 hover:opacity-100 transition-opacity font-medium"
               >
                 All
               </a>
             </nav>
           </div>
 
-          {/* Follow Us - 9.23% width - Icons on left, text aligned */}
-          <div className="flex flex-col gap-4" style={{ width: '98px' }}>
-            <h2 
-              className="text-[#FF911D]"
-              style={{
-                fontFamily: 'DM Sans',
-                fontSize: '17px',
-                lineHeight: '22px',
-                letterSpacing: '-0.3px',
-                fontWeight: 500,
-              }}
-            >
+          <div className="flex flex-col gap-4">
+            <h2 className="text-[#FF911D] font-medium text-base tracking-tight">
               Follow Us
             </h2>
             <nav className="flex flex-col gap-4">
-              {/* Facebook */}
               <a 
                 href="#" 
-                className="flex items-center font-sans text-[#1E1E1E] hover:opacity-100 transition-opacity"
-                style={{
-                  fontSize: '15px',
-                  lineHeight: '160%',
-                  opacity: 0.8,
-                  fontWeight: 500,
-                }}
+                className="flex items-center font-sans text-[#1E1E1E] text-[15px] leading-relaxed opacity-80 hover:opacity-100 transition-opacity font-medium"
               >
                 <div className="w-5 flex justify-start items-center">
                   <Image 
@@ -188,16 +88,9 @@ export default function Footer() {
                 </div>
                 <span className="ml-3">Facebook</span>
               </a>
-              {/* Twitter */}
               <a 
                 href="#" 
-                className="flex items-center font-sans text-[#1E1E1E] hover:opacity-100 transition-opacity"
-                style={{
-                  fontSize: '15px',
-                  lineHeight: '160%',
-                  opacity: 0.8,
-                  fontWeight: 500,
-                }}
+                className="flex items-center font-sans text-[#1E1E1E] text-[15px] leading-relaxed opacity-80 hover:opacity-100 transition-opacity font-medium"
               >
                 <div className="w-5 flex justify-start items-center">
                   <Image 
@@ -209,16 +102,9 @@ export default function Footer() {
                 </div>
                 <span className="ml-2">Twitter</span>
               </a>
-              {/* Instagram */}
               <a 
                 href="#" 
-                className="flex items-center font-sans text-[#1E1E1E] hover:opacity-100 transition-opacity"
-                style={{
-                  fontSize: '15px',
-                  lineHeight: '160%',
-                  opacity: 0.8,
-                  fontWeight: 500,
-                }}
+                className="flex items-center font-sans text-[#1E1E1E] text-[15px] leading-relaxed opacity-80 hover:opacity-100 transition-opacity font-medium"
               >
                 <div className="w-5 flex justify-start items-center">
                   <Image 
@@ -234,47 +120,20 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar - 382px from top */}
-        <div 
-          className="absolute flex justify-between items-center"
-          style={{
-            width: '1064px',
-            left: '188px',
-            top: '382px',
-          }}
-        >
-          <p 
-            className="text-[#1B2934]"
-            style={{
-              fontFamily: 'DM Sans',
-              fontSize: '15px',
-              lineHeight: '20px',
-              letterSpacing: '-0.204545px',
-              opacity: 0.5,
-            }}
-          >
-            Copyright © 2021.
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-black/10">
+          <p className="text-[#1B2934] text-[15px] leading-tight opacity-50">
+            Copyright © 2021
           </p>
           <div className="flex gap-8">
             <a 
               href="#" 
-              className="font-sans text-[#1E1E1E] hover:opacity-100 transition-opacity"
-              style={{
-                fontSize: '15px',
-                lineHeight: '160%',
-                opacity: 0.8,
-              }}
+              className="font-sans text-[#1E1E1E] text-[15px] leading-relaxed opacity-80 hover:opacity-100 transition-opacity"
             >
               Terms & Conditions
             </a>
             <a 
               href="#" 
-              className="font-sans text-[#1E1E1E] hover:opacity-100 transition-opacity"
-              style={{
-                fontSize: '15px',
-                lineHeight: '160%',
-                opacity: 0.8,
-              }}
+              className="font-sans text-[#1E1E1E] text-[15px] leading-relaxed opacity-80 hover:opacity-100 transition-opacity"
             >
               Privacy Policy
             </a>
